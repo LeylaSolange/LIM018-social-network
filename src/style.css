@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f7cae4;
+    color: rgb(15, 3, 6);
+    background-image: url('../images/fondolila01.jpg');
+    background-size: cover;
+
+    
+}
+#root{
+    height: 100%;
+    width: 100%;
+}
+.homeDiv{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.homeDiv button{
+    margin: 10px;
+    width: 80%;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 22px;    
+    font-family: 'Boogaloo', cursive;
+    border: 2px solid rgb(164, 136, 165);
+    cursor: pointer;
+    margin-top: 20px;
+    
+    background-image: radial-gradient(circle at 68.16% 31.84%, #ff9dd4 0, #ff95d6 12.5%, #ff8cd4 25%, #ff83ce 37.5%, #e478c4 50%, #c56eb8 62.5%, #a965ad 75%, #905da2 87.5%, #7a5799 100%);
+
+    
+}
+button:hover{
+    color: white;
+    background-image: radial-gradient(circle at 68.16% 31.84%, #ff7085 0, #ff638a 12.5%, #ff568c 25%, #ff4a8b 37.5%, #e33e87 50%, #c63481 62.5%, #ac2c7b 75%, #942776 87.5%, #7f2471 100%);
+}
+.homeDiv img{
+    padding: 1%;
+    width: 100%;
+    height: 90%;
+    opacity: 2;
+    filter: brightness(1.10);
+}
+.homeDiv P{
+    font-family: 'Emilys Candy', cursive;
+    font-size: 250%;
+    margin: 50px;
+}
+.registerDiv{
+    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.formDiv{
+    margin-top: -3%;
+    width: 90%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.registerDiv form{
+    width: 100%;
+    max-width: 750px;
+    height: 100%;
+    max-height: 400px;
+    margin: 4px 4px 4px 4px;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid white;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  
+   
+    
+} 
+.registerDiv img{
+    padding: 4%;
+    width: 90%;
+    height: 80%;
+}
+.registerDiv form input,
+.loginDiv form input{
+    margin: 8px 10px 7px 7px;
+    border-radius: 8px;
+    padding: 1%;
+    font-family: 'Pacifico', cursive;
+    border: 3px outset rgb(233, 237, 240);
+    width: 100%;
+    height: 150%;
+    background-color: #e9d4e4;
+    font-size: 140%;
+
+}
+.registerDiv h3{
+   margin: 5%  3% 0.5%;
+   font-family: 'Rancho', cursive;
+   font-size: 150%;
+
+}
+.formRegister ::placeholder{
+    font-family: 'Rancho', cursive;
+    font-size: 30px;
+
+    font-weight: 500;
+
+}
+.formRegister button{
+    background-color: rgb(238, 66, 123);
+    font-family: 'Boogaloo', cursive;
+    font-weight: 500;
+    border: none;
+    color: rgb(247, 235, 218);
+    margin-top: 5px;
+    font-size: 30px;
+    padding: 3px;
+    border-radius: 8px;
+}
+.buttonHome{
+    background-color: white;
+    font-family: 'Boogaloo', cursive;
+    border: none;
+    color: rgb(238, 66, 123);
+    margin-top: 7px;
+    font-size: 190%;
+    padding: 3px;
+    border-radius: 8px;
+    width: 50%;
+    max-width: 750px;
+   
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+}
+.loginDiv{
+    
+    width: 100%;
+    height: 100%;
+    margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.loginDiv form{
+    width: 95%;
+    height: 100%;
+    margin: 8px 8px 8px 8px;
+    padding: 6%;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid white;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.formLogin{
+    
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.loginDiv button{
+    
+    background-color: rgb(238, 66, 123);
+    font-family: 'Boogaloo', cursive;
+    font-weight: 500;
+    border: none;
+    color: rgb(247, 235, 218);
+    margin-top: 8px;
+    font-size: 30px;
+    padding: 4px;
+    border-radius: 8px;
+}
+.formLogin ::placeholder{
+    
+    font-family: 'Rancho', cursive;
+    font-size: 30px;
+
+    font-weight: 500;
+}
+.loginDiv div{
+    width: 100%;
+    max-width: 700px;
+    height: 100%;
+    margin: 1.5%;
+    padding: 2%;
+    font-size: 150%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Emilys Candy', cursive;
+}
