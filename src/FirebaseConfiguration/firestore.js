@@ -1,2 +1,1 @@
-import { addDoc, db, collection, } from "./firebase.js";
-
+import { addDoc, db, collection } from './firebase.js';

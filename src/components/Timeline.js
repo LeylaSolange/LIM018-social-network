@@ -1,5 +1,5 @@
 import {
-  db, collection, addDoc, auth, signOut,
+  db, collection, addDoc, auth, signOut, doc, onSnapshot,
 } from '../FirebaseConfiguration/firebase.js';
 import { onNavigate } from '../main.js';
 import { signOutUser } from '../FirebaseConfiguration/firebaseAuth.js';
@@ -15,6 +15,7 @@ export const timeline = () => {
   const articlePost = document.createElement('article');
   const profile = document.createElement('aside');
   const bttnsignout = document.createElement('button');
+  const divmuro = document.createElement('div');
 
   inputPost.setAttribute('type', 'text');
   inputPost.setAttribute('placeholder', 'Escribe tu publicación');
@@ -29,23 +30,30 @@ export const timeline = () => {
   sectionTimeline.appendChild(formPost);
   profile.appendChild(bttnsignout);
   homeDiv.appendChild(sectionTimeline);
+  homeDiv.appendChild(divmuro);
   homeDiv.appendChild(profile);
+
+  window.addEventListener('DOMContentLoaded', () => {
+    divmuro.textContent ='Aqui iran los posts';
+
+  });
 
   formPost.addEventListener('submit', (x) => {
     x.preventDefault();
-    console.log(inputPost.value);
     const Name = sessionStorage.nameUser;
     const nameGoo = sessionStorage.nameGoogle;
 
+    if (!inputPost.value.trim()) {
+      return;
+    }
+
     if (nameGoo) {
       console.log(nameGoo);
-      const docRef =  
-      addDoc(collection(db, 'posts'), {
+      const docRef = addDoc(collection(db, 'posts'), {
         text: inputPost.value,
         fecha: Date.now(),
         usuario: nameGoo,
       });
-      console.log('Document written with ID: ', docRef.id);
     } if (Name) {
       console.log(Name);
       const docRef = addDoc(collection(db, 'posts'), {
@@ -56,20 +64,12 @@ export const timeline = () => {
       });
     }
 
-    bttnsignout.addEventListener('click', (e) => {
-      e.preventDefault();
+    inputPost.value = '';
+  });
+  bttnsignout.addEventListener('click', (e) => {
+    e.preventDefault();
 
-      signOutUser();
-    });
-    // try {
-    //   const docRef = addDoc(collection(db, 'posts'), {
-    //     text: inputPost.value,
-    //     fecha: Date.now(),
-    //   });
-    //   console.log('Document written with ID: ', docRef.id);
-    // } catch (e) {
-    //   console.error('Error adding document: ', e);
-    // }
+    signOutUser();
   });
 
   return homeDiv;

@@ -10,7 +10,7 @@ export const registerUser = (email, password) => createUserWithEmailAndPassword(
     // Signed in
     const user = userCredential.user;
     console.log(user);
-    
+
     onNavigate('/login');
     // ...
   })
