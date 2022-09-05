@@ -6,7 +6,7 @@ import {
   GoogleAuthProvider, signInWithPopup,
 } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-auth.js';
 import {
-  getFirestore, collection, addDoc, getDocs, doc, getDoc, onSnapshot,
+  getFirestore, collection, addDoc, getDoc, doc, onSnapshot, deleteDoc, updateDoc,
 // eslint-disable-next-line import/no-unresolved
 } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js';
 
@@ -28,6 +28,6 @@ const provider = new GoogleAuthProvider();
 
 export {
   createUserWithEmailAndPassword, auth, signInWithEmailAndPassword,
-  provider, signInWithPopup, GoogleAuthProvider, collection, addDoc, db, signOut,doc,
-  onSnapshot,
+  provider, signInWithPopup, GoogleAuthProvider, collection, addDoc, db, signOut, doc,
+  onSnapshot, deleteDoc, getDoc, updateDoc,
 };
